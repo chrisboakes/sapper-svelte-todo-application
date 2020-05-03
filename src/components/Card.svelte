@@ -2,6 +2,29 @@
     export let data;
 </script>
 
+<style>
+    li {
+        align-items: flex-start;
+        display: flex;
+        margin-bottom: .5rem;
+        line-height: 1.2;
+        justify-content: center;
+    }
+
+    .status {
+        margin-right: 10px;
+    }
+
+    .title {
+        width: 300px;
+    }
+
+    .completed {
+        color: #aaa;
+        text-decoration: line-through;
+    }
+</style>
+
 <li>
     <span class="status">
         {#if data.completed}
