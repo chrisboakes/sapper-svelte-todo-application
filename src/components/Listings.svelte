@@ -3,9 +3,13 @@
     import Filters from './Filters.svelte';
 
     export let todos;
+
+    function filterData(event) {
+        console.log(event.detail);
+    }
 </script>
 
-<Filters />
+<Filters on:updatefilter={ filterData } />
 
 <ul>
     {#each todos as todo}
