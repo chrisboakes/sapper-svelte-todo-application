@@ -1,9 +1,11 @@
 <script>
+    import Card from './Card.svelte';
+
     export let todos;
 </script>
 
 <ul>
     {#each todos as todo}
-        <li>{ todo.title }</li>
+        <Card data={ todo } />
     {/each}
 </ul>
