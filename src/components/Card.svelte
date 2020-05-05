@@ -20,7 +20,7 @@
     }
 
     .completed {
-        color: #aaa;
+        color: #666;
         text-decoration: line-through;
     }
 </style>
