@@ -15,4 +15,9 @@
     }
 </script>
 
+<svelte:head>
+	<title>Listings | Sapper/Svelte Demo</title>
+	<meta name="description" content="Dummy sapper/svelte project - listings" />
+</svelte:head>
+
 <Listings todos={ data } />
