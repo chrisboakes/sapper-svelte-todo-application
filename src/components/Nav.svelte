@@ -47,7 +47,7 @@
 	<nav>
 		<ul>
 			<li>
-				<a href="." class='{ segment === undefined ? 'current' : '' }'>
+				<a href="/" class='{ segment === undefined ? 'current' : '' }'>
 					Listings
 				</a>
 			</li>
