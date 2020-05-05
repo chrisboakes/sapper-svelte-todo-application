@@ -1,4 +1,4 @@
-# A Simple Sapper/Svelte TODO Application
+# A simple Sapper/Svelte TODO application
 
 Built for [this tutorial](https://chrisboakes.com/getting-started-with-sapper-and-svelte/).
 
@@ -22,3 +22,13 @@ npm run export
 ```
 
 Your compiled project will now sit in `__sapper__/export`.
+
+## Deploying to Netlify
+
+If you'd like to host your static build on Netlify, it's extremely simple:
+
+- Log in to your [Netlify](https://www.netlify.com/) account
+- Create a new site from Git and select your repository
+- Select your branch
+- Set the build command as `npm run export`
+- Set the publish directory as `__sapper__/export`
