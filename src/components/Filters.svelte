@@ -11,6 +11,10 @@
 </script>
 
 <style>
+	label {
+		font-size: .8rem;
+	}
+
     div {
         padding-bottom: 1.5rem;
         margin: 0 auto;
@@ -23,7 +27,8 @@
 </style>
 
 <div>
-    <select bind:value={ selected } on:change={ updateFilter }>
+	<label for="filter">Filter:</label>
+    <select id="filter" bind:value={ selected } on:change={ updateFilter }>
         <option value="all">All</option>
         <option value="incomplete">Incomplete</option>
         <option value="complete">Complete</option>
