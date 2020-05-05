@@ -10,6 +10,15 @@
     }
 </script>
 
+<div>
+	<label for="filter">Filter:</label>
+    <select id="filter" bind:value={ selected } on:change={ updateFilter }>
+        <option value="all">All</option>
+        <option value="incomplete">Incomplete</option>
+        <option value="complete">Complete</option>
+    </select>
+</div>
+
 <style>
 	label {
 		font-size: .8rem;
@@ -25,12 +34,3 @@
         width: 100%;
     }
 </style>
-
-<div>
-	<label for="filter">Filter:</label>
-    <select id="filter" bind:value={ selected } on:change={ updateFilter }>
-        <option value="all">All</option>
-        <option value="incomplete">Incomplete</option>
-        <option value="complete">Complete</option>
-    </select>
-</div>
