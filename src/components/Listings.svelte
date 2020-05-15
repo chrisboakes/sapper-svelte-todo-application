@@ -1,25 +1,20 @@
 <script>
     import Card from './Card.svelte';
-    import Filters from './Filters.svelte';
+	import Filters from './Filters.svelte';
 
-    export let todos;
-    export let filteredContent = todos;
+	export let todos;
 
-    function filterData(event) {
-        // Show all data
-        if (event.detail === 'all') {
-            filteredContent = todos;
-        // Only show completed items
-        } else if (event.detail === 'complete') {
-            filteredContent = todos.filter(item => item.completed);
-        // Only show incomplete items
-        } else {
-            filteredContent = todos.filter(item => !item.completed);
-        }
-    }
+	const filters = {
+		all: () => true,
+		complete: ({ completed }) => completed,
+		incomplete: ({ completed }) => !completed
+	};
+
+	let selected = 'all';
+	$: filteredContent = todos.filter(filters[selected]);
 </script>
 
-<Filters on:updatefilter={ filterData } />
+<Filters bind:selected />
 
 <ul>
     {#each filteredContent as todo}

@@ -1,18 +1,10 @@
 <script>
-    import { createEventDispatcher } from 'svelte';
-
-    const dispatch = createEventDispatcher();
-
-    let selected = 'all';
-    
-    function updateFilter(event) {
-        dispatch('updatefilter', selected);
-    }
+    export let selected = 'all';
 </script>
 
 <div>
 	<label for="filter">Filter:</label>
-    <select id="filter" bind:value={ selected } on:change={ updateFilter }>
+    <select id="filter" bind:value={ selected }>
         <option value="all">All</option>
         <option value="incomplete">Incomplete</option>
         <option value="complete">Complete</option>
