@@ -2,7 +2,7 @@
     export let data;
 </script>
 
-<li>
+<div class="card">
     <span class="status">
         {#if data.completed}
             <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M10 19.993c5.523 0 10-4.474 10-9.993C20 4.48 15.523.007 10 .007S0 4.48 0 10c0 5.52 4.477 9.993 10 9.993z" fill="#32BEA6"/><path d="M9.198 15.316L4.47 11.632l1.344-1.725 2.904 2.262 4.792-6.915L15.308 6.5l-6.11 8.816z" fill="#fff"/></svg>
@@ -11,10 +11,10 @@
         {/if}
     </span>
     <span class="title { data.completed ? 'completed' : '' }">{ data.title }</span>
-</li>
+</div>
 
 <style>
-    li {
+    .card {
         align-items: flex-start;
         display: flex;
         margin-bottom: .5rem;

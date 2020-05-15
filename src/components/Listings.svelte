@@ -1,4 +1,5 @@
 <script>
+	import { slide } from 'svelte/transition';
     import Card from './Card.svelte';
 	import Filters from './Filters.svelte';
 
@@ -17,7 +18,9 @@
 <Filters bind:selected />
 
 <ul>
-    {#each filteredContent as todo}
-        <Card data={ todo } />
+    {#each filteredContent as todo (todo.id)}
+        <li transition:slide>
+			<Card data={ todo } />
+		</li>
     {/each}
 </ul>
